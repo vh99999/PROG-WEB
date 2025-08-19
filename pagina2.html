@@ -3,14 +3,16 @@
     <head>
         <title>Pagina 2 HTML Básico</title>
         <style>
+            /** isso é um comentario em CSS **/
             img{
                 width: 200px;
                 border: 3px solid;
-                border-radius: 10px;
+                border-radius: 5px;
                 box-shadow: 0 0 10px red;
             }
             img:hover{
                 box-shadow: 0 0 10px purple;
+                
             }
             p{
                 color: #000000;
@@ -19,8 +21,8 @@
                 
 
             }
-            table, td, td{
-               border: 1px solid;
+            table, td, td, th{
+               border: 2px solid;
                border-collapse: collapse;
             }
             td{
@@ -29,6 +31,8 @@
         </style>
     </head>
     <body>
+
+        <!-- isso é um comentario em html-->
         <a href="index.html">Voltar para o index</a>
         <h1>Titulo de nivel 1</h1>
         <h2>Tutilo de nivel 2</h2>
@@ -133,17 +137,49 @@
             <h2>Tabelas no HTML</h2>
             <table>
                 <tr>
-                    <td>weaver</td>
-                    <td>daeron</td>
+                    <th>weaver</th>
+                    <th>daeron</th>
                 </tr>
                 <tr>
-                    <td>Daemon 
-                    Firstborn of the unknown</td>
-                    <td>King
-                    inhabitant of tomb of ariel</td>
+                    <td>  Daemon 
+                    Firstborn of the unknown  </td>
+                    <td>  King
+                    inhabitant of tomb of ariel  </td>
                 </tr>
 
             </table>
+        </div>
+
+        <div>
+            <h2>Formularios</h2>
+            <label for="nomeUsuario">Nome de usuário: </label>
+            <input id = "nomeUsuario"type="text">
+            <br>
+            <label for="cor">cor Cachaça: </label>
+            <input id="cor"type="color">
+            <br>
+            <!--Adicione demais campos do formulario
+            data nascimento,
+            email,
+            endereço,
+            campo observação com multiplas linhas
+            botão
+            -->
+            <label for="nascimento">Data de nascimento: </label>
+            <input id="nascimento"type="date">
+            <br>
+            <label for="email">Email: </label>
+            <input id="email"type="email">
+            <br>
+            <label for="endereço">Endereço: </label>
+            <input id="endereço"type="number">
+            <br>
+            <div>
+                <p><b>Nota: </b> Todos os campos devem ser preenchidos com letras MAIUSCULAS <br> sem ESPAÇO</p>
+            </div>
+
+            <label for="btn">Confirmar</label>
+            <input id="btn"type="button">
         </div>
 
     </body>
