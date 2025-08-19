@@ -130,7 +130,8 @@
         </div>
         <div>
             <h2>Imagens</h2>
-            <img src="./imgs/Sunny_midjourney_art.webp" alt="Sunny, personagem principal de shadow slave">
+            <img src="./imgs/Sunny_midjourney_art.webp"
+                alt="Sunny, personagem principal de shadow slave">
         </div>
 
         <div>
@@ -141,45 +142,59 @@
                     <th>daeron</th>
                 </tr>
                 <tr>
-                    <td>  Daemon 
-                    Firstborn of the unknown  </td>
-                    <td>  King
-                    inhabitant of tomb of ariel  </td>
+                    <td> Daemon
+                        Firstborn of the unknown </td>
+                    <td> King
+                        inhabitant of tomb of ariel </td>
                 </tr>
 
             </table>
         </div>
 
         <div>
-            <h2>Formularios</h2>
-            <label for="nomeUsuario">Nome de usuário: </label>
-            <input id = "nomeUsuario"type="text">
-            <br>
-            <label for="cor">cor Cachaça: </label>
-            <input id="cor"type="color">
-            <br>
-            <!--Adicione demais campos do formulario
-            data nascimento,
-            email,
-            endereço,
-            campo observação com multiplas linhas
-            botão
-            -->
-            <label for="nascimento">Data de nascimento: </label>
-            <input id="nascimento"type="date">
-            <br>
-            <label for="email">Email: </label>
-            <input id="email"type="email">
-            <br>
-            <label for="endereço">Endereço: </label>
-            <input id="endereço"type="number">
-            <br>
-            <div>
-                <p><b>Nota: </b> Todos os campos devem ser preenchidos com letras MAIUSCULAS <br> sem ESPAÇO</p>
-            </div>
+            <form action>
+                <h2>Formularios</h2>
+                <label for="nomeUsuario">Nome de usuário: </label>
+                <input id="nomeUsuario" type="text" placeholder="NOME">
 
-            <label for="btn">Confirmar</label>
-            <input id="btn"type="button">
+                <br>
+                <label for="cor">cor Cachaça: </label>
+                <input id="cor" type="color">
+                <br>
+                <!--Adicione demais campos do formulario
+                data nascimento,
+                email,
+                endereço,
+                campo observação com multiplas linhas
+                botão
+                -->
+                <label for="nascimento">Data de nascimento: </label>
+                <input id="nascimento" type="date">
+                <br>
+                <label for="email">E-mail: </label>
+                <input id="email" type="email" placeholder="exemplo@gmail.com">
+                <br>
+                <label for="endereço">Endereço: </label>
+                <input id="endereço" type="number">
+                <br>
+                <div>
+                    <p><b>Nota: </b> Todos os campos devem ser preenchidos com
+                        letras MAIUSCULAS e sem ESPAÇO</p>
+                </div>
+
+                <label for="btn">Confirmar</label>
+                <input id="btn" type="button" value="Confirmar">
+            </form>
+
+            <form action="https://www.google.com/search" method="post">
+                <h2>Busca</h2>
+                <label for="Key">Entre com termo</label>
+                <input type="text" id="Key" name="q">
+                <input type="text" name="Sunless">
+                <button>Buscar</button>
+                <input type="button" value="Buscar">
+
+            </form>
         </div>
 
     </body>
