@@ -1,0 +1,13 @@
+/** seletor {pripriedades:valor;}**/
+
+p{
+    background-color: rgb(242, 227, 255);
+}
+
+#tituloformacss{
+    background-color: rgb(163, 163, 255);
+}
+
+.vermelho{
+    color:red
+}
