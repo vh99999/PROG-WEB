@@ -7,6 +7,20 @@
     <title>Document</title>
     <style>
 
+        @keyframes subir {
+            0%{
+
+            }
+            50%{
+                
+            }
+            100%{
+                top: 0px;
+                right: 50%;
+                left: 50%;
+                transform: rotate(200deg);
+            }
+        }
       
 
         div {
@@ -20,11 +34,11 @@
 
 <body>
     <div style="position: relative; height: 420px; width: 100%; border: 2px solid #cbd5e1;">
-        <div style="background-color: purple; top:50%; left:50%; transform: translate(-50%,-50%);">box1</div>
-        <div style="background-color: green; bottom:0px; right:0px; ">box2</div>
-        <div style="background-color: red;top:0px;  left:0px; ">box3</div>
-        <div style="background-color: yellow; top:0px;  right:0px; ">box4</div>
-        <div style="background-color: blue; bottom:0px; left:0px;">box5</div>
+        <div style="background-color: purple; top:50%; left:50%; transform: translate(-50%,-50%); animation: subir 1s none 0s infinite;">box1</div>
+        <div style="background-color: green; bottom:0px; right:0px; animation: subir 1s none 0s infinite;">box2</div>
+        <div style="background-color: red;top:0px;  left:0px; animation: subir 1s none 0s infinite;">box3</div>
+        <div style="background-color: yellow; top:0px;  right:0px; animation: subir 1s none 0s infinite;">box4</div>
+        <div style="background-color: blue; bottom:0px; left:0px; animation: subir 1s none 0s infinite;">box5</div>
     </div>
 
     <h1>Explicação:</h1>
