@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+        .box{
+            position: fixed;
+            color: white;
+            background-color: black;
+            width: 6vw;
+            height: 6vw;
+            font: 200 3vw/6vw system-ui;
+            text-align: center;
+            animation: move 2s linear 0s infinite;
+            position: fixed;
+        }
+        
+
+        @keyframes move {
+            0%{
+                top: 0vh;
+                left: 0vw;
+            }         
+            25%{
+               background-color: red;
+               top: 0vh;
+               left: 94vw;
+            ;
+            }
+            50%{
+                background-color: blue;
+                top: 94vh;
+                left: 94vw;
+            }
+            75%{
+                background-color: blueviolet;
+                top: 94vh;
+                left: 0vw;
+                
+            }
+            87%{
+                background-color: yellow;
+            }
+            100%{
+                top: 0vh;
+                left: 0vw;
+               background-color: black;
+            }
+        }
+
+    </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box" id="item1">1</div>
+        </div>
+    </body>
+</html>
