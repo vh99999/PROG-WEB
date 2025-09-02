@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8" />
+<title>4c-display</title>
+<style>
+  * { box-sizing: border-box; margin: 0 }
+  body { padding: 24px }
+  .palco {
+    position: relative;         /* referência para os absolutes */
+    height: 420px;
+    border: 2px solid #cbd5e1;
+  }
+  .box {
+    position: absolute;         /* sai do fluxo normal */
+    width: 90px; height: 90px;
+    color:#000;
+    font: 700 12px/1 system-ui, sans-serif;
+    padding: 6px;
+  }
+  .b1 { background:#ef4444; top:12px;  left:12px; }            /* topo-esq */
+  .b2 { background:#f59e0b; top:12px;  right:12px; }           /* topo-dir */
+  .b3 { background:#3b82f6; bottom:12px; left:12px; color:#fff } /* base-esq */
+  .b4 { background:#22c55e; bottom:12px; right:12px; }         /* base-dir */
+  .b5 { background:#e879f9;                                    /* centro */
+        top:50%; left:50%; transform: translate(-50%,-50%); }
+</style>
+</head>
+<body>
+  <div class="palco">
+    <div class="box b1">box1</div>
+    <div class="box b2">box2</div>
+    <div class="box b5">box3</div>
+    <div class="box b3">box4</div>
+    <div class="box b4">box5</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+      
+
+        div {
+            position: absolute;
+            width: 90px;
+            height: 90px;
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="position: relative; height: 420px; width: 100%; border: 2px solid #cbd5e1;">
+        <div style="background-color: purple; top:50%; left:50%; transform: translate(-50%,-50%);">box1</div>
+        <div style="background-color: green; bottom:0px; right:0px; ">box2</div>
+        <div style="background-color: red;top:0px;  left:0px; ">box3</div>
+        <div style="background-color: yellow; top:0px;  right:0px; ">box4</div>
+        <div style="background-color: blue; bottom:0px; left:0px;">box5</div>
+    </div>
+
+    <h1>Explicação:</h1>
+    <p>A div por padrão tem como display o Block, cada uma quebra linha e ocupa 100% da largura,mas se mudarmos um div principal para <b>position: relative;</b> e dentro dele colocarmos divs com <b>position:absoluto;</b>
+    esses divs interiores se posicionarão de acordo com a div exterior utilizando bottom top right left</p>
+    <p>A cor de fundo esta sendo setada com background-color em cada uma das divs assim como as posições top bottom left right</p>
+    <p>A box1 usa como posicionamento top e left em 50%, mas isso faz com que a ponta/começo do elemento fique no centro da div, e não o elemento em si, por isso uso translate
+    para fazer com que o elemento fique centralizado</p>
+</body>
+
+</html>
