@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes decolar {
+            0% {
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                rotate: 0deg;
+            }
+
+            25% {
+                top: 5%;
+                left: 60%;
+                transform: translate(-50%, -50%);
+                rotate: 90deg;
+            }
+
+
+
+            100% {
+                top: 60%;
+                left: 75%;
+                transform: translate(-50%, -50%);
+                rotate: 180deg;
+            }
+
+
+        }
+
+        img {
+            position: fixed;
+            width: 200px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+
+        .animar {
+            animation: decolar 2s 1 forwards;
+        }
+
+        h2 {
+            position: fixed;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #btn {
+            position: fixed;
+            top: 65%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .final {
+            top: 90%;
+            left: 90%;
+        }
+    </style>
+</head>
+
+<body>
+    <img id="img" src="./imgs/FoguetePousado.png" alt="Imagem">
+    <div>
+        <h2 id="cd">---</h2>
+        <input id="btn" type="button" value="Lançar">
+        <script>
+            const btn = document.getElementById('btn');
+            const h2 = document.getElementById('cd');
+            const img = document.getElementById('img');
+            function sleep(ms) {
+                return new Promise(resolve => setTimeout(resolve, ms));
+            }
+
+            btn.addEventListener('click', async () => {
+                h2.textContent = "3";
+                await sleep(1000);
+                h2.textContent = "2";
+                await sleep(1000);
+                h2.textContent = "1";
+                await sleep(1000);
+                h2.textContent = "Lançar!";
+                await sleep(1000);
+                h2.textContent = "";
+                img.src = "./imgs/FogueteVoando.png"
+                img.classList.add('animar');
+            });
+
+            img.addEventListener('animationend', () => {
+                img.src = "./imgs/FogueteQuebrado.png";
+                img.classList.remove('animar');
+                img.classList.add('final');
+                img.style.transform = "translate(-50%, -50%) rotate(45deg)";
+            });
+        </script>
+    </div>
+</body>
+
+</html>
