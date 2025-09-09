@@ -1,38 +1,79 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
-<meta charset="utf-8" />
-<title>4c-display</title>
-<style>
-  * { box-sizing: border-box; margin: 0 }
-  body { padding: 24px }
-  .palco {
-    position: relative;         /* referência para os absolutes */
-    height: 420px;
-    border: 2px solid #cbd5e1;
-  }
-  .box {
-    position: absolute;         /* sai do fluxo normal */
-    width: 90px; height: 90px;
-    color:#000;
-    font: 700 12px/1 system-ui, sans-serif;
-    padding: 6px;
-  }
-  .b1 { background:#ef4444; top:12px;  left:12px; }            /* topo-esq */
-  .b2 { background:#f59e0b; top:12px;  right:12px; }           /* topo-dir */
-  .b3 { background:#3b82f6; bottom:12px; left:12px; color:#fff } /* base-esq */
-  .b4 { background:#22c55e; bottom:12px; right:12px; }         /* base-dir */
-  .b5 { background:#e879f9;                                    /* centro */
-        top:50%; left:50%; transform: translate(-50%,-50%); }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            border: 1px solid blue;
+        }
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            border: 1px solid red;
+            width: 100px;
+            height: 100px;
+        }
+        .box:hover{
+            flex-grow: 100;
+        }
+        .box{
+            flex-shrink: 0;
+        }
+        #item5{
+            flex-shrink: 10;
+        }
+
+        #item1{
+            order: 1;
+        }
+        #item2{
+            order: 3;
+        }
+        #item3{
+            order: 7;
+        }
+        #item4{
+            order: 2;
+        }
+        #item5{
+            order: 1;
+            flex-direction: column;
+        }
+    </style>
 </head>
 <body>
-  <div class="palco">
-    <div class="box b1">box1</div>
-    <div class="box b2">box2</div>
-    <div class="box b5">box3</div>
-    <div class="box b3">box4</div>
-    <div class="box b4">box5</div>
-  </div>
+    
+    <h1>Flexbox</h1>
+    <p>Até 2008 o mecanismo de posicionamento exitente no CSS eram: fluxo do html, float e positions, mas em 2007 se popularizou dispositivos moveis.
+        Para possibilitar uma maior responsividade o CSS 3 trouxe alguns recursos como screen media, que permite definir conjuntos de regras 
+        diferentes para com base no tamanho da tela do usuario e também a propriedade display:flex, que especifica o mecanismo FlexBox
+        de posicionamento dos elementos HTML</p>
+
+    <p>Para definir um componente como um container flex basta definir o display:flex</p>
+
+    <pre>
+        &lt;style&gt;
+            .container{display: flex}
+        &lt;/style&gt;
+
+        &lt;div class=".container"&gt;
+            ...
+        &lt;div&gt;
+    </pre>
+
+    <div class="container">
+        <div class="box" id="item1">1</div>
+        <div class="box" id="item2">2</div>
+        <div class="box" id="item3">3</div>
+        <div class="box" id="item4">4</div>
+        <div class="box" id="item5">5</div>
+    </div>
+
 </body>
 </html>
