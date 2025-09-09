@@ -10,7 +10,40 @@
         }
         .container{
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
+            align-items: center;
+        }
+        .box{
+            border: 1px solid red;
+            width: 100px;
+            height: 100px;
+        }
+        .box:hover{
+            flex-grow: 100;
+        }
+        .box{
+            flex-shrink: 0;
+        }
+        #item5{
+            flex-shrink: 10;
+        }
+
+        #item1{
+            order: 1;
+        }
+        #item2{
+            order: 3;
+        }
+        #item3{
+            order: 7;
+        }
+        #item4{
+            order: 2;
+        }
+        #item5{
+            order: 1;
+            flex-direction: column;
         }
     </style>
 </head>
