@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            border: 1px solid black;
+        }
+        body{
+            margin: 50px;
+            display: grid;
+            height: 60vh;
+            width: 60vw;
+            border: 1px solid black;
+          /**  grid-template-columns: 1fr 4fr 1fr 1fr;
+            grid-template-rows: 4fr 1fr 1fr 1fr;**/
+            grid-template-areas: "header header header header" "main main sidebar sidebar" "main main footer footer";
+            grid-template-rows: 4fr 20fr 4fr;
+        }
+        #caxinha1{
+            font-size: 32px;
+            text-align: center;
+            grid-area: header;
+            background-color: aquamarine;
+        }
+        #caxinha2{
+            text-align: center;
+            font-size: 40px;
+            grid-area: main;
+            background-color:  bisque;
+        }
+        #caxinha3{
+            text-align: center;
+            align-items: center;
+            font-size: 40px;
+            grid-area: sidebar;
+            background-color: yellowgreen;
+        }
+        #caxinha5{
+            text-align: center;
+            font-size: 40px;
+            grid-area: footer;
+            background-color: red;
+        }
+        .int{
+            display: flex;
+            position: fixed;
+            top: 260px;
+            left: 750px;
+            height: 130px;
+            width: 130px;
+            border: 1px solid black;
+        }
+        .int2{
+            display: flex;
+            position: fixed;
+            top: 260px;
+            left: 750px;
+            height: 230px;
+            width: 330px;
+            border: 1px solid black;
+        }
+        .p{
+            display: flex;
+            position: fixed;
+            top: 260px;
+            left: 885px;
+            background-color: gray;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box" id="caxinha1">Header</div>
+    <div class="box" id="caxinha2">Nav</div>
+    <div class="box" id="caxinha3">
+        <p>Content</p>
+        <div class="int">
+            <div class="int2">
+                <p class="p" style="font-size: 10px;">_______________________________________</p>
+            </div>
+
+        </div>
+    </div>
+    
+    <div class="box" id="caxinha5">Footer</div>
+</body>
+</html>
