@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .imagens {
+      display: flex;
+      gap: 15px;
+      width: 90%;
+      height: 350px;
+    }
+
+    .item {
+      flex: 2;
+      border-radius: 20px;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      position: relative;
+      transition: flex 0.4s ease
+    }
+
+    .item:hover {
+      flex: 4;
+      transition: flex 0.4s ease
+      
+    }
+
+    .item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+        
+    }
+
+    .circulo {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: white;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+      font-size: 14px;
+    }
+
+    .icone {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      color: black;
+      flex-shrink: 0;
+    }
+
+    .circulo span {
+      opacity: 0;
+      transform: translateX(-10px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .item:hover .circulo span {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  </style>
+</head>
+<body>
+  <div class="imagens">
+    <div class="item">
+      <img src="https://picsum.photos/id/1018/800/600" alt="img1">
+      <div class="circulo"><div class="icone">❄</div><span>Montanha</span></div>
+    </div>
+    <div class="item">
+      <img src="https://picsum.photos/id/1015/800/600" alt="img2">
+      <div class="circulo"><div class="icone">🏞️</div><span>Rio</span></div>
+    </div>
+    <div class="item">
+      <img src="https://picsum.photos/id/1025/800/600" alt="img3">
+      <div class="circulo"><div class="icone">🐶</div><span>Cachorro</span></div>
+    </div>
+    <div class="item">
+      <img src="https://picsum.photos/id/1035/800/600" alt="img4">
+      <div class="circulo"><div class="icone">☀</div><span>Cachoeira</span></div>
+    </div>
+    <div class="item">
+      <img src="https://picsum.photos/id/1040/800/600" alt="img5">
+      <div class="circulo"><div class="icone">🏰</div><span>Castelo</span></div>
+    </div>
+  </div>
+</body>
+</html>
