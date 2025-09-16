@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            border: 1px solid black;
+        }
+        body{
+            display: grid;
+            height: 98vh;
+          /**  grid-template-columns: 1fr 4fr 1fr 1fr;
+            grid-template-rows: 4fr 1fr 1fr 1fr;**/
+            grid-template-areas: "header header header header" "main main empty sidebar" "footer footer footer footer";
+            grid-template-rows: 4fr 20fr 4fr;
+        }
+        #caxinha1{
+            grid-area: header;
+            background-color: aquamarine;
+        }
+        #caxinha2{
+            grid-area: main;
+            background-color:  bisque;
+        }
+        #caxinha3{
+            grid-area: empty;
+            background-color: yellowgreen;
+        }
+        #caxinha4{
+            grid-area: sidebar;
+            background-color: blue;
+        }
+        #caxinha5{
+            grid-area: footer;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="caxinha1">1</div>
+    <div class="box" id="caxinha2">2</div>
+    <div class="box" id="caxinha3">3</div>
+    <div class="box" id="caxinha4">4</div>
+    <div class="box" id="caxinha5">5</div>
+</body>
+</html>
