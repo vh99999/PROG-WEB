@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+        *{
+            margin: 0;
+            padding: 5;
+        }
+        .container{
+            display: flex;
+            height: 350px;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            background-color: burlywood;
+        }
+        .bandeiras{
+            margin: 5px;
+            height: 300px;
+            width: 600px;
+        }
+        #bandeira1{
+            border: 1px solid red;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            border: 1px solid black;
+        }
+        #bandeira3{
+            display: flex;
+            flex-direction: row;
+        }
+        #china{
+            width: 130px;
+            height: 130px;
+            border-radius: 100%;
+            background-color: red;
+        }
+        .linhasb2{
+            height: 100px;
+        }
+        .linhasb3{
+            width: 200px;
+            
+        }
+    </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="bandeiras" id="bandeira1">
+                <div id="china">
+
+                </div>
+            </div>
+            <div class="bandeiras" id="bandeira2">
+                <div class="linhasb2" style="background-color: red;"></div>
+                <div class="linhasb2" style="background-color: white;"></div>
+                <div class="linhasb2" style="background-color: blue;"></div>
+            </div>
+            <div class="bandeiras" id="bandeira3">
+                 <div class="linhasb3" style="background-color: green;"></div>
+                 <div class="linhasb3" style="background-color: white;"></div>
+                 <div class="linhasb3" style="background-color: red;"></div>
+            </div>
+        </div>
+    </body>
+</html>
