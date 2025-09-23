@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-weight: bolder;
+        }
+        body{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            height: 100vh;
+            width: 100vw;
+        }
+        #box1{
+            background-color: orange;
+            flex-grow: 1;
+        }
+        #box2{
+            background-color: red;
+            flex-grow: 1;
+        }
+        #box3{
+            background-color: green;
+            flex-grow: 1;
+        }
+        #box4{
+            background-color: blue;
+            flex-grow: 9;
+        }
+        #box5{
+            background-color: orange;
+            flex-grow: 1;
+        }
+        #box6{
+            background-color: green;
+            flex-grow: 1;
+        }
+        #box7{
+            background-color: blue;
+            flex-grow: 1;
+        }
+        .dentro{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 1px;
+        }
+    </style>
+</head>
+<body>
+        <div class="dentro" id="box1"><p>Header</p></div>
+        <div class="dentro" id="box2"><p>Banner</p></div>
+        <div class="dentro" id="box3"><p>Left Side</p></div>
+        <div class="dentro" id="box4"><p>Main Content</p></div>
+        <div class="dentro" id="box5"><p>Right Side</p></div>
+        <div class="dentro" id="box6"><p>Low Content</p></div>
+        <div class="dentro" id="box7"><p>Footer</p></div>
+</body>
+</html>
