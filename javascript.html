@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        //codigo js
+        //alert("Bando de bute")
+
+        var i = 0;
+        let nome = "Prange"
+        document.body.style.backgroundColor="lightgray"
+        let button = document.createElement('button')
+        button.textContent = 'clique em mim'
+        document.body.appendChild(button)
+        document.body.style.height="100vh"
+        document.body.style.display="flex"
+        document.body.style.alignItems="center"
+        document.body.style.justifyContent="center"
+
+        button.addEventListener("click",()=>{
+            button.textContent = 'clique em mim denovo'
+        })
+
+    </script>
+</body>
+</html>
