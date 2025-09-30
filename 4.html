@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            *{
+                margin: 10px;
+               
+                
+            }
+            .comeco{
+                height: 20vh;
+                width: 10vw;
+                border: 1px solid black;
+            }
+            .imc{
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="comeco">
+            <input type="text" id="nome" placeholder="Nome">
+            <input type="number" id="peso" step="0.1" placeholder="Peso">
+            <input type="number" id="altura" step="0.01" placeholder="Altura">
+            <button id="button">Calcular</button>
+        </div>
+        <div class="imc">
+            <p id="par1"></p>
+            <p id="par2"></p>
+        </div>
+
+        <script>
+            let button = document.querySelector("#button");
+            let nome = document.querySelector("#nome");
+            let peso = document.querySelector("#peso");
+            let altura = document.querySelector("#altura");
+            let p1 = document.querySelector("#par1");
+            let p2 = document.querySelector("#par2");
+
+            
+
+            button.addEventListener("click", ()=>{
+                if(nome.value.trim() === "" || isNaN(peso.value) || isNaN(altura.value)){
+                   let pmp = alert("OTARIO")
+                }else{
+
+                    peso = parseFloat(peso.value)
+                    altura = parseFloat(altura.value)
+
+                    let imc = peso/(altura+altura)
+                    p1.innerHTML = imc
+                    
+                }
+            })
+        </script>
+
+    </body>
+</html>
