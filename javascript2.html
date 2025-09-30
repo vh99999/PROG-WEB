@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="texto">Texto</h1>
+    <h1 id="texto2">Texto</h1>
+    <h1 id="texto2">Texto</h1>
+    <h1 id="texto2">Texto</h1>
+    <h1 id="texto2">Texto</h1>
+    <h1 id="texto2">Texto</h1>
+    
+
+    <script>
+        let h1 = document.querySelector("#texto");
+        h1.style.color="red";
+        let h2 = document.querySelector("#texto2");
+        h2.style.color="blue";
+
+        let titulos = document.querySelectorAll("h1")
+
+        titulos.forEach((e,i) => {
+            e.innerHTML += "-"+i;
+        });
+    </script>
+</body>
+</html>
