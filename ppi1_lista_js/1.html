@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <title>O que é JavaScript?</title>
+    <h1>O que é JavaScript?</h1>
+    <p>É uma linguagem de programação, interpretada, para desenvolvimento
+        web que é executada sobre o navegador do cliente em um sandbox,
+        que limita o acesso aos recursos do sistema operacional, fornecendo
+        interfaces pre-definidas, a forma de acesso a recursos do sistema se
+        faz por meio
+        de objetos globais disponibilizados ao navegador, como: document,
+        history, local storage e console. Ela foi criada para adicionar
+        dinamismo e interatividade nas paginas.
+        A tipagem é dinamica forte, permitindo que variaveis possam ser
+        atribuidas e reatribuidas a qualquer momento, sem a nessesidade de
+        declarar seu tipo previamente.
+        Os tipos de dados nativos da linguagem são: Number, String, Boolean,
+        Object, Array e Function
+    </p>
+    <p id="clock">
+        <span id="hora"></span>
+        <span id="minuto"></span>
+        <span id="segundo"></span>
+        <span id="milisegundo"></span>
+    </p>
+
+    <button onclick="continuar()" id="comecar">Começar</button>
+    <script>
+        console.log("Ola mundo")
+        let i;
+        document.getElementById("hora").innerHTML = "Agora são " + new Date().toLocaleTimeString();
+        function parar() {
+            clearInterval(i);
+        }
+        function continuar() {
+            if (i == null) {
+                i = setInterval(() => {
+                    let hora = new Date();
+                    document.getElementById("hora").innerHTML = hora.getHours();
+                    document.getElementById("minuto").innerHTML = ":" + hora.getMinutes();
+                    document.getElementById("segundo").innerHTML = ":" + hora.getSeconds();
+                    document.getElementById("milisegundo").innerHTML = ":" + hora.getMilliseconds();
+                }, 1);
+                comecar.innerHTML = "Parar";
+            } else {
+                clearInterval(i);
+                i = null;
+                comecar.innerHTML = "Continuar";
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>
