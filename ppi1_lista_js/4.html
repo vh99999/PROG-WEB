@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <style>
-            *{
-                margin: 10px;
-               
-                
-            }
-            .comeco{
-                height: 20vh;
-                width: 10vw;
-                border: 1px solid black;
-            }
-            .imc{
-                border: 1px solid black;
-            }
-        </style>
+        * {
+            margin: 10px;
+
+
+        }
+
+        .comeco {
+            height: 20vh;
+            width: 10vw;
+            border: 1px solid black;
+        }
+
+        .imc {
+            border: 1px solid black;
+            height: auto;
+            width: 20vw;
+        }
+    </style>
     </head>
+
     <body>
 
         <div class="comeco">
@@ -34,29 +40,50 @@
         </div>
 
         <script>
-            let button = document.querySelector("#button");
-            let nome = document.querySelector("#nome");
-            let peso = document.querySelector("#peso");
-            let altura = document.querySelector("#altura");
-            let p1 = document.querySelector("#par1");
-            let p2 = document.querySelector("#par2");
+        let button = document.querySelector("#button");
+        let nome = document.querySelector("#nome");
+        let peso = document.querySelector("#peso");
+        let altura = document.querySelector("#altura");
+        let p1 = document.querySelector("#par1");
+        let p2 = document.querySelector("#par2");
 
-            
 
-            button.addEventListener("click", ()=>{
-                if(nome.value.trim() === "" || isNaN(peso.value) || isNaN(altura.value)){
-                   let pmp = alert("OTARIO")
-                }else{
 
-                    peso = parseFloat(peso.value)
-                    altura = parseFloat(altura.value)
+        button.addEventListener("click", () => {
+            if (nome.value.trim() === "" || isNaN(peso.value) || isNaN(altura.value)) {
+                let pmp = alert("OTARIO")
+            } else {
 
-                    let imc = peso/(altura+altura)
-                    p1.innerHTML = imc
-                    
+                nome = nome.value.trim()
+                peso = parseFloat(peso.value)
+                altura = parseFloat(altura.value)
+
+                let imc = peso / (altura + altura)
+
+
+                if (imc < 18.5) {
+                    p1.innerHTML += " Você está abaixo do peso.";
+                    p2.innerHTML = "<img src='imgs/magro.png' alt='Abaixo do peso'>";
+                } else if (imc >= 18.5 && imc < 25) {
+                    p1.innerHTML += " Você está com o peso normal.";
+                    p2.innerHTML = "<img src='imgs/normal.png' alt='Peso normal'>";
+                } else if (imc >= 25 && imc < 30) {
+                    p1.innerHTML += " Você está com sobrepeso.";
+                    p2.innerHTML = "<img src='imgs/sobrepeso.png' alt='Sobrepeso'>";
+                } else if (imc >= 30 && imc < 35) {
+                    p1.innerHTML += " Obesidade grau I.";
+                    p2.innerHTML = "<img src='imgs/obesidade1.png' alt='Obesidade grau 1'>";
+                } else if (imc >= 35 && imc < 40) {
+                    p1.innerHTML += " Obesidade grau II.";
+                    p2.innerHTML = "<img src='imgs/obesidade2.png' alt='Obesidade grau 2'>";
+                } else {
+                    p1.innerHTML += " Obesidade grau III.";
+                    p2.innerHTML = "<img src='imgs/obesidade3.png' alt='Obesidade grau 3'>";
                 }
-            })
-        </script>
+            }
+        })
+    </script>
 
     </body>
+
 </html>
