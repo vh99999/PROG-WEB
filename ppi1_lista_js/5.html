@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+        * {
+            margin: 10px;
+        }
+
+        .intervalo {
+            height: auto;
+            width: 20vw;
+        }
+
+        .gerar {
+            height: auto;
+            width: 20vw;
+        }
+    </style>
+    </head>
+    <body>
+
+        <div class="intervalo">
+            <h1>Sorteio</h1>
+            <p><input type="number" id="min" placeholder="Min"></p>
+            <p><input type="number" id="max" placeholder="Max"></p>
+            <button id="button" onclick="sortear()">Sortear numero</button>
+        </div>
+
+        <div class="gerar">
+            <p class="resultado">Número sorteado:</p>
+            <p class="array"></p>
+
+        </div>
+
+        <script>
+        let numerosSorteados = [];
+        let button = document.querySelector("#button");
+        let min = document.querySelector("#min");
+        let max = document.querySelector("#max");
+        let resultado = document.querySelector(".resultado");
+
+        function sortear() {
+            let minValue = parseInt(min.value);
+            let maxValue = parseInt(max.value);
+
+            if (Number.isNaN(minValue)) minValue = 1;
+            if (Number.isNaN(maxValue)) maxValue = 100;
+
+            let numeroSorteado = Math.random() * (maxValue - minValue + 1) + minValue;
+            numeroSorteado = Math.floor(numeroSorteado);
+            resultado.innerHTML = "Número sorteado: " + numeroSorteado;
+
+            if(numerosSorteados.length === 0){
+                numerosSorteados.push({ numero: numeroSorteado, repetições: 0 });
+                console.log("adicionado");
+            }else{
+                for(let i = 0; i < numerosSorteados.length; i++) {
+                    if(numerosSorteados[i].numero === numeroSorteado){
+                        numerosSorteados[i].repetições = numerosSorteados[i].repetições + 1;
+                        console.log("incrementado");
+                    }else{
+                        numerosSorteados.push({ numero: numeroSorteado, repetições: 0 });
+                        console.log("adicionado");
+                    }
+                }
+            }
+            
+            
+            document.querySelector(".array").innerHTML = "Números sorteados: " + JSON.stringify(numerosSorteados);
+        }
+
+    </script>
+    </body>
+</html>
