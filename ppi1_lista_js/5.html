@@ -53,21 +53,14 @@
             numeroSorteado = Math.floor(numeroSorteado);
             resultado.innerHTML = "Número sorteado: " + numeroSorteado;
 
-            if(numerosSorteados.length === 0){
-                numerosSorteados.push({ numero: numeroSorteado, repetições: 0 });
+            const existente = numerosSorteados.find(e => e.numero === numeroSorteado);
+            if (existente) {
+                existente.repetições = existente.repetições + 1;
+                console.log("incrementado");
+            } else {
+                numerosSorteados.push({ numero: numeroSorteado, repetições: 1 });
                 console.log("adicionado");
-            }else{
-                for(let i = 0; i < numerosSorteados.length; i++) {
-                    if(numerosSorteados[i].numero === numeroSorteado){
-                        numerosSorteados[i].repetições = numerosSorteados[i].repetições + 1;
-                        console.log("incrementado");
-                    }else{
-                        numerosSorteados.push({ numero: numeroSorteado, repetições: 0 });
-                        console.log("adicionado");
-                    }
-                }
             }
-            
             
             document.querySelector(".array").innerHTML = "Números sorteados: " + JSON.stringify(numerosSorteados);
         }

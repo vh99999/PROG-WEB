@@ -4,8 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+    </style>
 </head>
 <body>
     
+    <div class="container">
+        <input type="number" id="min" placeholder="Min">
+        <input type="number" id="max" placeholder="Max">
+        <button id="button" onclick="ehPrimo()">Obter Numeros primos</button>
+        <div id="resultado"></div>
+    </div>
+
+    <script>
+        const Primos = [];
+    function ehPrimo() {
+            const resultado = document.querySelector("#resultado");
+            let min = parseInt(document.querySelector("#min").value, 10);
+            let max = parseInt(document.querySelector("#max").value, 10);
+
+            if (isNaN(min)) min = 0;
+            if (isNaN(max)) max = 0;
+
+            const primos = [];
+
+            for (let i = 2; i <= max; i++) {
+                let eh = true;
+                for (let d = 2; d < i; d++) {
+                    if (i % d === 0) {
+                        eh = false;
+                        break;
+                    }
+                }
+                if (eh) primos.push(i);
+            }
+
+            if (primos.length === 0) {
+                resultado.innerText = "Nenhum número primo no intervalo.";
+            } else {
+                resultado.innerText = primos.join(", ");
+            }
+        }
+
+
+
+
+    </script>
+
+
 </body>
 </html>
