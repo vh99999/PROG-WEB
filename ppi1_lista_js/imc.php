@@ -1,3 +1,10 @@
+<?php
+
+session_start();
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +14,18 @@
 </head>
 <body>
     <?php
+
+    if (!isset($_POST["peso"]) || !isset($_POST["altura"]) || !isset($_POST["nome"]) || !isset($_POST["email"])) {
+        header("Location: formulario.php?error=faltando_dados");
+        exit();
+    }
+
+    if(!is_numeric($peso) || !is_numeric($altura) || $altura <= 0 || is_numeric($nome)){
+        header("Location: formulario.php?error=valores_invalidos");
+        exit();
+    }
+
+
     if (isset($_POST["peso"]) && isset($_POST["altura"]) && isset($_POST["nome"]) && isset($_POST["email"])) {
         $peso = floatval($_POST["peso"]);
         $altura = floatval($_POST["altura"]);
@@ -34,7 +53,7 @@
             echo "Altura inválida.";
         }
     } else {
-        echo "Por favor, preencha todos os campos do formulário.";
+        header("Location: formulario.php?error=faltando_dados");
     }
     
     ?>
