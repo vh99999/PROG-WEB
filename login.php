@@ -21,11 +21,11 @@
     }
     ?>
     <form action="autenticacao.php" method="post">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required><br><br>
+        <label for="Usuario">Usuario:</label>
+        <input type="text" id="Usuario" name="Usuario" required><br><br>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br><br>
+        <label for="Senha">Senha:</label>
+        <input type="password" id="Senha" name="Senha" required><br><br>
 
         <input type="submit" value="Login">
     </form>
