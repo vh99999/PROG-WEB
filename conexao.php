@@ -19,6 +19,15 @@
         return $statement->execute();
     }
     //exemplo cadastro
-    cadastra_usuario("João Silva", "joao", "senha123");
+    //cadastra_usuario("João Silva", "joao", "senha123");
+
+    function delete_usuario($id){
+        $conn = connecta_bd();
+        $statement = $conn->prepare("DELETE FROM usuarios WHERE id = :id");
+        $statement->bindparam(':id', $id);
+        return $statement-> execute();
+    }
+
+    delete_usuario(4);
 
 ?>
