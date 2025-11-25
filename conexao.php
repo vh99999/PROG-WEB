@@ -42,4 +42,23 @@
 
     //update_usuario(8, "Soje silveira", "jose", "senha321");
 
+    function get_usuario($id){
+        $conn = connecta_bd();
+        $statement = $conn->prepare("SELECT * FROM usuarios WHERE id = :id");
+        $statement->bindparam(':id', $id);
+        $statement-> execute();
+        return $statement-> fetch(PDO::FETCH_ASSOC);
+    }
+
+    //echo var_dump(get_usuario(8));
+
+    function get_usuarios(){
+        $conn = connecta_bd();
+        $statement = $conn->prepare("SELECT * FROM usuarios");
+        $statement-> execute();
+        return $statement-> fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    //print_r(var_dump(get_usuarios()));
+
 ?>
