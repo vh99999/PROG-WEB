@@ -13,6 +13,7 @@
             <th>ID</th>
             <th>Nome</th>
             <th>Login</th>
+            <th>Editar</th>
         </tr>
         <?php foreach ($usuarios as $usuario): ?>
         <tr>
