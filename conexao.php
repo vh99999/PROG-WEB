@@ -28,6 +28,18 @@
         return $statement-> execute();
     }
 
-    delete_usuario(4);
+    //delete_usuario(4);
+
+    function update_usuario($id, $nome, $login, $senha){
+        $conn = connecta_bd();
+        $statement = $conn->prepare("UPDATE usuarios SET nome = :nome, login = :login, senha = :senha WHERE id = :id");
+        $statement->bindparam(':id', $id);
+        $statement->bindparam(':nome', $nome);
+        $statement->bindparam(':login', $login);
+        $statement->bindparam(':senha', $senha);
+        return $statement-> execute();
+    }
+
+    //update_usuario(8, "Soje silveira", "jose", "senha321");
 
 ?>
