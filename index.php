@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style_login.css">
 </head>
+
 <body>
-    
+
     <?php
     session_start();
     if (isset($_GET["error"])) {
@@ -23,17 +25,45 @@
     ?>
     <div class="container">
         <h2 class="gappy">Login</h2>
-        <form action="autenticacao.php" method="post">
-        <label for="Usuario">Usuario:</label>
-        <input type="text" id="Usuario" name="Usuario" required><br><br>
-
-        <label for="Senha"; style='margin:4px;'>Senha:</label>
-        <input type="password" id="Senha" name="Senha" required><br><br>
-
-        <input type="submit" value="Login">
-        </form>
     </div>
-    
+    <div class="container">
+
+        <form action="autenticacao.php" method="post">
+
+            <div class="container">
+                <label for="Usuario">Login</label>
+            </div>
+
+            <div class="container">
+                <input type="text" id="Usuario" name="username" required><br><br>
+            </div>
+
+            <div class="container">
+                <label for="Senha">Senha</label>
+            </div>
+
+            <div class="container">
+                <input type="password" id="Senha" name="password" required><br><br>
+            </div>
+
+            <div class="container">
+                <input type="submit" value="Login">
+            </div>
+
+        </form>
+
+        <div class="container">
+            <button onclick="cadastro()" class="gappy">Cadastro</button>
+
+                <script>
+                    function cadastro() {
+                        window.location.href = "cadastro_usuario.php";
+                    }
+                </script>
+        </div>
+    </div>
+
 
 </body>
+
 </html>

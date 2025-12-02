@@ -7,6 +7,6 @@ if(!isset($_POST['nome']) || !isset($_POST['login']) || !isset($_POST['senha']))
 require_once "conexao.php";
 
 cadastra_usuario(($_POST['nome']), ($_POST['login']), ($_POST['senha']));
-header("Location: lista_usuarios.php");
+header("Location: index.php");
 
 ?>

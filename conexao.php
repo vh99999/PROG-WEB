@@ -69,4 +69,15 @@
 
     //print_r(var_dump(get_usuarios()));
 
+    function login_usuario($username, $password) {
+        $conn = connecta_bd();
+        $statement = $conn->prepare("SELECT * FROM usuarios WHERE login = :login AND senha = :senha");
+        $statement->bindParam(':login', $username);
+        $statement->bindParam(':senha', $password);
+        $statement->execute();
+        return $statement->fetch(PDO::FETCH_ASSOC);
+    }
+
+    
+
 ?>
