@@ -50,6 +50,14 @@
         return $statement-> fetch(PDO::FETCH_ASSOC);
     }
 
+    function get_usuarioByName($username){
+        $conn = connecta_bd();
+        $statement = $conn->prepare("SELECT * FROM usuarios WHERE nome = :username");
+        $statement->bindparam(':username', $username);
+        $statement-> execute();
+        return $statement-> fetch(PDO::FETCH_ASSOC);
+    }
+
     //echo var_dump(get_usuario(8));
 
     function get_usuarios(){

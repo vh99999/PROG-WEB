@@ -16,10 +16,10 @@
     <div class="container">
         <form action="processa_cadastro.php" method="post">
             
-            <label for="nome">Nome:</label>
+            <label for="nome"; style='margin:2px;'>Nome:</label>
             <input type="text" id="nome" name="nome" required><br><br>
 
-            <label for="login">Login:</label>
+            <label for="login"; style='margin:3px;'>Login:</label>
             <input type="text" id="login" name="login" required><br><br>
 
             <label for="senha">Senha:</label>

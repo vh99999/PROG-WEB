@@ -11,14 +11,15 @@
     session_start();
 
     if (!isset($_POST["username"]) || !isset($_POST["password"])) {
-        header("Location: login.php?error=faltando_dados");
+       // header("Location: login.php?error=faltando_dados");
+       
         exit();
     }
 
     $username = $_POST["username"];
     $password = $_POST["password"];
 
-    if( $username === "admin" && $password === "senha123" ) {
+    if( $username === "1" && $password === "1" ) {
         $_SESSION["username"] = $username;
         echo "<h2>Login bem-sucedido!</h2>";
         echo "<p>Bem-vindo, $username!</p>";
