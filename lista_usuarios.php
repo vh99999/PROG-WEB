@@ -15,7 +15,6 @@
             <th>Login</th>
             <th>Editar</th>
             <th>Visualizar</th>
-            <th>Pesquisar</th>
         </tr>
         <?php foreach ($usuarios as $usuario): ?>
         <tr>
@@ -24,7 +23,6 @@
             <td><?php echo htmlspecialchars($usuario['login']);?></td>
             <td><a href="editar_usuario.php?id=<?php echo urlencode($usuario['id']); ?>">Editar</a></td>
             <td><a href="editar_usuario.php?id=<?php echo urlencode($usuario['id']); ?>">Visualizar</a></td>
-            <td><a href="editar_usuario.php?id=<?php echo urlencode($usuario['id']); ?>">Pesquisar</a></td>
         </tr>
         <?php endforeach; ?>
     </table>
