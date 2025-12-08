@@ -55,11 +55,11 @@
         <div class="container">
             <button onclick="cadastro()" class="gappy">Cadastro</button>
 
-                <script>
-                    function cadastro() {
-                        window.location.href = "cadastro_usuario.php";
-                    }
-                </script>
+            <script>
+                function cadastro() {
+                    window.location.href = "cadastro_usuario.php";
+                }
+            </script>
         </div>
     </div>
 

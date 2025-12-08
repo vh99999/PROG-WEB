@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
-    
+
 </head>
+
 <body>
 
     <header>
@@ -15,11 +17,11 @@
     </header>
     <div class="container">
         <form action="processa_cadastro.php" method="post">
-            
-            <label for="nome"; style='margin:2px;'>Nome:</label>
+
+            <label for="nome" ; style='margin:2px;'>Nome:</label>
             <input type="text" id="nome" name="nome" required><br><br>
 
-            <label for="login"; style='margin:3px;'>Login:</label>
+            <label for="login" ; style='margin:3px;'>Login:</label>
             <input type="text" id="login" name="login" required><br><br>
 
             <label for="senha">Senha:</label>
@@ -29,4 +31,5 @@
         </form>
     </div>
 </body>
+
 </html>

@@ -6,11 +6,13 @@ session_start();
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h2>Formulário de Cadastro</h2>
 
@@ -18,10 +20,10 @@ session_start();
     if (isset($_SESSION["username"])) {
         echo "<p>Usuário logado: " . htmlspecialchars($_SESSION["username"]) . "</p>";
     } else {
-        header ("Location: login.php?error=nao_logado");
+        header("Location: login.php?error=nao_logado");
         exit();
     }
-    if(isset($_GET["nome"])) {
+    if (isset($_GET["nome"])) {
         $_SESSION["nome"] = ($_GET["nome"]);
         echo "<p>Nome salvo na sessão: " . htmlspecialchars($_SESSION["nome"]) . "</p>";
     }
@@ -38,9 +40,9 @@ session_start();
     }
 
 
-    
-    
-    
+
+
+
     ?>
 
     <form action="imc.php" method="post">
@@ -58,4 +60,5 @@ session_start();
 
         <input type="submit" value="Enviar">
 </body>
+
 </html>

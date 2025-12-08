@@ -1,10 +1,10 @@
 <?php
-    require_once "conexao.php";
-    session_start();
+require_once "conexao.php";
+session_start();
 
-    $id = $_POST["id"];
-    
-    delete_usuario($id);
+$id = $_POST["id"];
 
-    header ("Location: lista_usuarios.php");
-    ?>
+delete_usuario($id);
+
+header("Location: lista_usuarios.php");
+?>
